@@ -1,13 +1,18 @@
 <template>
-    <div>
-        <h1>wrapper</h1>
-        <router-view></router-view>
-    </div>
+    <v-sheet height="100vh" width="100vw" class="transparent" tile>
+        <v-sheet tile height="calc(100vh - 56px)" class="transparent">
+            <router-view></router-view>
+        </v-sheet>
+        <BottomNav></BottomNav>
+    </v-sheet>
 </template>
 
 <script>
+    import BottomNav from "@/components/NavBottom/BottomNav";
+
     export default {
-        name: "AppWrapper"
+        name: "AppWrapper",
+        components: {BottomNav}
     }
 </script>
 
