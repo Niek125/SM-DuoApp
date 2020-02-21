@@ -7,6 +7,13 @@ import router from "@/router";
 
 Vue.config.productionTip = false;
 
+const DEFAULT_TITLE = 'Meal Share';
+router.afterEach((to) => {
+  Vue.nextTick(() => {
+    document.title = to.meta.title || DEFAULT_TITLE;
+  });
+});
+
 new Vue({
   router,
   vuetify,
