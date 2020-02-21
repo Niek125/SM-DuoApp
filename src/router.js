@@ -3,6 +3,7 @@ import Router from "vue-router"
 import LogIn from "@/components/LogIn";
 import Meals from "@/components/Meals";
 import AppWrapper from "@/components/AppWrapper";
+import Map from "@/components/Map";
 
 Vue.use(Router);
 
@@ -24,8 +25,15 @@ export default new Router({
                     name: "Meals",
                     component: Meals,
                     meta: {
-                        auth: true,
                         title: "Meals",
+                    },
+                },
+                {
+                    path: "/Map",
+                    name: "Map",
+                    component: Map,
+                    meta: {
+                        title: "Map",
                     },
                 },
             ],
