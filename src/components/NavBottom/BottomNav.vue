@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation value="0" color="green">
+    <v-bottom-navigation :value="activeBtn" color="green">
         <NavButton v-for="(data, index) in tabs" :name="data.name" :icon="data.icon" :key="'tab:' + index"
                    v-on:click.native="redirect(data.pathName, index)"></NavButton>
     </v-bottom-navigation>
@@ -21,6 +21,7 @@
         },
         data() {
             return {
+                activeBtn: "Map",
                 tabs: [
                     {
                         name: "Meals",
