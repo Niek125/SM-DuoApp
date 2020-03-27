@@ -21,7 +21,7 @@
         },
         data() {
             return {
-                activeBtn: "Map",
+                activeBtn: "Meals",
                 tabs: [
                     {
                         name: "Meals",
@@ -33,6 +33,11 @@
                         icon: "mdi-map-legend",
                         pathName: "Map",
                     },
+                    {
+                        name: "Form",
+                        icon: "mdi-post",
+                        pathName: "Form",
+                    }
                 ],
             }
         },

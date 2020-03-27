@@ -4,6 +4,7 @@ import LogIn from "@/components/LogIn";
 import Meals from "@/components/Meals";
 import AppWrapper from "@/components/AppWrapper";
 import Map from "@/components/Map";
+import MealForm from "@/components/MealForm";
 
 Vue.use(Router);
 
@@ -29,11 +30,19 @@ export default new Router({
                     },
                 },
                 {
-                    path: "/Map",
+                    path: "/map",
                     name: "Map",
                     component: Map,
                     meta: {
                         title: "Map",
+                    },
+                },
+                {
+                    path: "/form",
+                    name: "Form",
+                    component: MealForm,
+                    meta: {
+                        title: "Form",
                     },
                 },
             ],
