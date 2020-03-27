@@ -4,18 +4,18 @@
             <slot name="activator" v-bind:on="on"></slot>
         </template>
         <v-toolbar color="#74D277" flat>
-            <v-col class="pa-0" cols="2">
+            <v-col class="pa-0" cols="1">
                 <v-row class="ma-0" justify="center" align="center">
                     <v-btn icon v-on:click="dialog = false" class="white--text">
                         <v-icon>mdi-arrow-left</v-icon>
                     </v-btn>
                 </v-row>
             </v-col>
-            <v-spacer></v-spacer>
-            <v-col cols="7" class="pa-0">
-                <v-toolbar-title class="white--text">View a meal</v-toolbar-title>
+            <v-col cols="10" class="pa-0">
+                <v-row justify="center" class="ma-0">
+                    <v-toolbar-title class="white--text">View a meal</v-toolbar-title>
+                </v-row>
             </v-col>
-            <v-spacer></v-spacer>
         </v-toolbar>
         <v-sheet tile class="fill-height">
             <v-row class="ma-0" justify="center">
@@ -23,20 +23,24 @@
                     <v-card class="mt-4">
                         <v-img src="https://picsum.photos/510/300?random">
                             <v-sheet id="mealImgGrad" class="fill-height transparent">
-                                <v-row class="ma-0 fill-height" align-content="space-between">
-                                    <v-row class="ma-0">
-                                        <v-card-title class="white--text pt-3 pb-1">Meatballs
-                                        </v-card-title>
-                                        <v-spacer></v-spacer>
-                                        <v-card color="#74D277" tile id="shaved-edge">
-                                            <v-card-title class="white--text pt-3 pb-1">€3,50</v-card-title>
-                                        </v-card>
-                                    </v-row>
-                                    <v-row justify="end" class="ma-0">
-                                        <v-chip color="#74D277" v-for="(tag, index) in tags" :key="'tag'+ index"
-                                                class="mr-2 mb-2 white--text">{{tag}}
-                                        </v-chip>
-                                    </v-row>
+                                <v-row align="space-between" class="ma-0 fill-height">
+                                    <v-col cols="12" class="pa-0">
+                                        <v-row class="ma-0">
+                                            <v-card-title class="white--text pt-3 pb-1">Meatballs
+                                            </v-card-title>
+                                            <v-spacer></v-spacer>
+                                            <v-card color="#74D277" tile id="shaved-edge">
+                                                <v-card-title class="white--text pt-3 pb-1">€3,50</v-card-title>
+                                            </v-card>
+                                        </v-row>
+                                    </v-col>
+                                    <v-col cols="12">
+                                        <v-row align="end" justify="end" class="ma-0 fill-height">
+                                            <v-chip dense color="#74D277" v-for="(tag, index) in tags" :key="'tag'+ index"
+                                                    class="mr-2 mb-2 white--text">{{tag}}
+                                            </v-chip>
+                                        </v-row>
+                                    </v-col>
                                 </v-row>
                             </v-sheet>
                         </v-img>
