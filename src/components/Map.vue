@@ -26,9 +26,13 @@
                             </v-row>
                         </v-col>
                         <v-col cols="2" class="pa-0">
-                            <v-btn icon>
-                                <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
+                            <MealOverview>
+                                <template v-slot:activator="{on}">
+                                    <v-btn icon v-on="on">
+                                        <v-icon>mdi-chevron-right</v-icon>
+                                    </v-btn>
+                                </template>
+                            </MealOverview>
                         </v-col>
                     </v-row>
                 </v-card>
@@ -40,6 +44,7 @@
 <script>
     import Mapbox from "mapbox-gl";
     import {MglMap, MglMarker, MglPopup} from "vue-mapbox";
+    import MealOverview from "@/components/MealOverview";
 
     export default {
         name: "Map",
@@ -62,6 +67,7 @@
             this.mapbox = Mapbox;
         },
         components: {
+            MealOverview,
             MglMap,
             MglMarker,
             MglPopup,
