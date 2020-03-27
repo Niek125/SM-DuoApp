@@ -12,7 +12,25 @@
                        'right': [-markerRadius, (markerHeight - markerRadius) * -1]
             }">
                 <v-card class="green lighten-1">
-                    <v-card-text>I'm food</v-card-text>
+                    <v-row class="ma-0" justify="center" align="center">
+                        <v-col cols="10" class="pa-0">
+                            <v-row class="ma-0">
+                                <v-card-text class="pa-2 pb-0">MeatBalls</v-card-text>
+                                <v-row class="ma-0 px-2 pb-1">
+                                    <v-icon small>mdi-alarm</v-icon>
+                                    18:00 - 20:00
+                                    <v-spacer></v-spacer>
+                                    <v-icon small>mdi-currency-usd</v-icon>
+                                    €4,-
+                                </v-row>
+                            </v-row>
+                        </v-col>
+                        <v-col cols="2" class="pa-0">
+                            <v-btn icon>
+                                <v-icon>mdi-chevron-right</v-icon>
+                            </v-btn>
+                        </v-col>
+                    </v-row>
                 </v-card>
             </MglPopup>
         </MglMarker>
