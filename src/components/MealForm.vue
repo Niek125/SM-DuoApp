@@ -15,7 +15,7 @@
             </v-row>
             <v-row class="ma-0">
                 <v-col cols="8" class="pa-0">
-                    <v-text-field v-model="timeSpan" label="TimeSpan" color="white" outlined></v-text-field>
+                    <v-text-field v-model="timeSpan" type="time" label="TimeSpan" color="white" outlined></v-text-field>
                 </v-col>
                 <v-spacer></v-spacer>
                 <v-col cols="3" class="pa-0">
@@ -44,7 +44,7 @@
                 price: "",
                 tags: [{tag: "spicy", active: false}, {tag: "gluten", active: false},
                     {tag: "peanuts", active: false}, {tag: "meat", active: false}, {tag: "fish", active: false},
-                    {tag: "fruit", active: false},]
+                    {tag: "fruit", active: false},],
             }
         },
         methods: {

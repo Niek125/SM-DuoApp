@@ -21,7 +21,7 @@
         },
         data() {
             return {
-                activeBtn: "Meals",
+                activeBtn: this.$route.path.slice(1),
                 tabs: [
                     {
                         name: "Meals",
